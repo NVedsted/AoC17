@@ -1,0 +1,7 @@
+{
+  "name": "javascript",
+  "version": "0.0.1",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

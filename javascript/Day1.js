@@ -1,8 +1,3 @@
-const rl = require('readline').createInterface(
-    process.stdin,
-    process.stdout
-);
-
 /**
  * Gets the sum of a string of digits.
  * In the first challenge, a digit is included in the sum if it's identical to the next digit.
@@ -24,9 +19,14 @@ function getSum(s, first = true) {
     return sum
 }
 
-rl.question('Puzzle input: ', (input) => {
-    console.log(`First code: ${getSum(input, true)}`);
-    console.log(`Second code: ${getSum(input, false)}`);
-    rl.close();
-    process.stdin.destroy();
-});
+/**
+ * Solves the daily challenge.
+ *
+ * @param {string} input The input.
+ * @param {int} challenge Which challenge to solve.
+ * @returns {number} The result.
+ */
+module.exports = (input, challenge) => {
+    const first = challenge === 1;
+    return getSum(input, first);
+};
